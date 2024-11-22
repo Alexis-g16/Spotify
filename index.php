@@ -12,11 +12,12 @@
 
 <body class="bg-dark text-light">
     <!-- playlist header -->
-    <header class="D container-fluid">
-        <div class="D row">
-            <div class="D col-5 text-center">
-                <img class="m-2" src="/logo.jpeg" alt="playlist image" class="D img-fluid" />
-                <div class="D d-flex gap-3   ">
+    <header class="container-fluid">
+        <div class=" row">
+            <div class=" col-5 text-center">
+                <img class="m-2 p-5" src="/logo.jpeg" alt="playlist image" class="D img-fluid" />
+                <div class=" d-flex gap-3 p-2 m 2 ">
+
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-play-circle-fill" viewBox="0 0 16 16">
                         <path
@@ -27,19 +28,28 @@
                         <path
                             d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
                     </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                        class="bi bi-three-dots" viewBox="0 0 16 16">
+                        <path
+                            d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                    </svg>
+
                 </div>
             </div>
-            <div class="D col align-content-center">
-                <div class="D">
-                    <h1> Daily Mix </h1>
+            <div class="col align-content-center">
+                <div>
                     <p>
-                        playlist
+                        Playlist
                     </p>
+                    <h1> Daily Mix </h1>
+                    <p>This a daily mix combined with your favorite songs and songs we'd think you'd like. All these
+                        songs are recommended personally on your tastes!</p>
                 </div>
 
             </div>
     </header>
     <!-- playlist image -->
+    <hr class="D-success">
     <!-- playlist information -->
     <!-- Action buttons -->
     <!-- Song information row -->
