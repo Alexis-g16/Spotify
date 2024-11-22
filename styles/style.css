@@ -1,3 +1,11 @@
 .D {
   border: 1px solid red;
 }
+
+.song-cover-img {
+  object-fit: contain;
+  width: 5rem;
+}
+.DD {
+  border: 1px solid gray;
+}

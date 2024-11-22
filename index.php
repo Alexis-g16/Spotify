@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+include 'songs.php';
+
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-        crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
@@ -58,27 +60,28 @@
     <!-- Action buttons -->
     <!-- Song information row -->
     <!-- Songs -->
-    <main class="container-fluid" id="songs">
-
+    <main class="container-fluid mb-5" id="songs">
         <?php
-        include 'songs.php';
-        $songs = [
-            [
-                'cover' => 'images/Marca_Registrada.jpeg',
-                'title' => 'Clausurado',
-                'album' => 'EVO LUXURY 2',
-                'artist' => 'Grupo Marca Registrada, Junior H',
-                'duration' => '3:06',
-            ],
-            [
-                'cover' => 'images/Junior_H',
-                'title' => 'Las Noches',
-                'album' => '$AD BOYZ 4 LIFE II',
-                'artist' => 'Junior',
-                'duration' => '3:46',
-            ]
+        for ($i = 0; $i < count($songs); $i++) {
+            $song = $songs[$i];
+            $song_title = $song['title'];
+            $song_cover = $song['cover'];
+            $song_album = $song['album'];
+            $song_artist = $song['artist'];
+            $song_duration = $song['duration'];
+            $song_number = $i + 1;
 
-        ];
+            echo "<div class=\"DD row border-bottom text-center\">";
+            echo "    <div class=\"col-1\">$song_number</div>";
+            echo "    <div class=\"col\">";
+            echo "        <img class=\"song-cover-img\" src=\"$song_cover\" alt=\"\">";
+            echo "    </div>";
+            echo "    <div class=\"col\">$song_title</div>";
+            echo " <div class=\"col\">$song_album</div>";
+            echo " <div class=\"col\">$song_artist</div>";
+            echo " <div class=\"col\">$song_duration</div>";
+            echo "</div>";
+        }
 
         ?>
     </main>
@@ -91,7 +94,8 @@
             <!-- back -->
             <button type="button" class="btn"><i class="bi bi-skip-start-fill text-white"></i></button>
             <!--resume/pause -->
-            <button type="button" class="btn btn-play" arial-label="Play/Pause"><i class="bi bi-play-fill text-white"></i></button>
+            <button type="button" class="btn btn-play" arial-label="Play/Pause"><i
+                    class="bi bi-play-fill text-white"></i></button>
             <!-- skip forward -->
             <button type="button" class="btn"><i class="bi bi-skip-end-fill text-white"></i></button>
             <!-- repeat -->
