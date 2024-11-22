@@ -53,11 +53,17 @@
             </div>
     </header>
     <!-- playlist image -->
-    <hr class="D-success">
     <!-- playlist information -->
     <!-- Action buttons -->
     <!-- Song information row -->
     <!-- Songs -->
+    <div class="row border">
+        <small class="col-1">#</small>
+        <small class="col">Title</small>
+        <small class="col-2">Album</small>
+        <small class="col-2">Artist</small>
+        <small class="col-2"><i class="bi bi-clock-fill"></i></small>
+    </div>
     <main class="container-fluid" id="songs">
 
         <?php
